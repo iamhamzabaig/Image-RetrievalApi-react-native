@@ -21,12 +21,12 @@ export default function ImageApiCall() {
     const data = await response.json();
     setPhotosData(data);
   };
-  console.log(photosData.alt);
+  console.log(photosData);
 
   return (
     <View style={styles.container}>
       <Text style={styles.textContainer}> {photosData.height}</Text>
-      <Image source={{ uri: photosData.src.small }} style={styles.image} />
+      <Image source={{ uri: photosData.src.regular }} style={styles.image} />
     </View>
   );
 }
